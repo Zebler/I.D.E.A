@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,7 @@
       <header class="py-3 mb-3 border-bottom">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid gap-5 p-0 d-flex align-items-center ">
-            <a href="index.html" class="link-body-emphasis text-decoration-none">
+            <a href="index.php" class="link-body-emphasis text-decoration-none">
               <img src="/view/assets/img/logo.png" alt="" width="100px">
             </a>
 
@@ -26,21 +25,21 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
               <ul class="nav nav-pills gap-2 navigation-links">
-                <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="shopping.html" class="nav-link">Shopping</a></li>
-                <li class="nav-item"><a href="profile.html" class="nav-link">My Account</a></li>
-                <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
-                <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
+                <li class="nav-item"><a href="index.php" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="shopping.php" class="nav-link">Shopping</a></li>
+                <li class="nav-item"><a href="profile.php" class="nav-link">My Account</a></li>
+                <li class="nav-item"><a href="cart.php" class="nav-link">Cart</a></li>
+                <li class="nav-item"><a href="checkout.php" class="nav-link">Checkout</a></li>
               </ul>
     
               <ul class="nav nav-pills navigation-icons">
-                <li class="nav-item"><a href="cart.html" class="nav-link">
+                <li class="nav-item"><a href="cart.php" class="nav-link">
                     <i class="bi bi-bag" style="font-size: 16px;"></i>
                 </a></li>
-                <li class="nav-item"><a href="favourite.html" class="nav-link">
+                <li class="nav-item"><a href="favourite.php" class="nav-link">
                     <i class="bi bi-heart" style="font-size: 16px;"></i>
                 </a></li>
-                <li class="nav-item"><a href="profile.html" class="nav-link">
+                <li class="nav-item"><a href="profile.php" class="nav-link">
                     <i class="bi bi-person" style="font-size: 16px;"></i>
                 </a></li>
               </ul>
@@ -163,7 +162,7 @@
         <div class="col-4 col-md-3 col-lg-2">        
           <div class="product-card card text-black">
             <i class="bi bi-heart pt-2 px-2"></i>
-            <a href="product-detail.html" class="link-body-emphasis text-decoration-none">
+            <a href="product-detail.php" class="link-body-emphasis text-decoration-none">
               <img
               src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
               class="product-img card-img-top img-fluid"
@@ -172,7 +171,7 @@
             </a>
             <div class="card-body p-2">
               <div class="text-center text-break">
-                  <h6 class="card-title"><a class="product-name" href="product-detail.html">REVSKÄR</a></h6>
+                  <h6 class="card-title"><a class="product-name" href="product-detail.php">REVSKÄR</a></h6>
               </div>
               <div class="d-flex justify-content-center">
                 <strong class="text-success product-price">$199</strong>
@@ -186,7 +185,7 @@
         <div class="col-4 col-md-3 col-lg-2">        
           <div class="product-card card text-black">
             <i class="bi bi-heart pt-2 px-2"></i>
-            <a href="product-detail.html" class="link-body-emphasis text-decoration-none">
+            <a href="product-detail.php" class="link-body-emphasis text-decoration-none">
               <img
               src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
               class="product-img card-img-top img-fluid"
@@ -195,7 +194,7 @@
             </a>
             <div class="card-body p-2">
               <div class="text-center text-break">
-                  <h6 class="card-title"><a class="product-name" href="product-detail.html">REVSKÄR</a></h6>
+                  <h6 class="card-title"><a class="product-name" href="product-detail.php">REVSKÄR</a></h6>
               </div>
               <div class="d-flex justify-content-center">
                 <strong class="text-success product-price">$199</strong>
@@ -209,7 +208,7 @@
         <div class="col-4 col-md-3 col-lg-2">        
           <div class="product-card card text-black">
             <i class="bi bi-heart pt-2 px-2"></i>
-            <a href="product-detail.html" class="link-body-emphasis text-decoration-none">
+            <a href="product-detail.php" class="link-body-emphasis text-decoration-none">
               <img
               src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
               class="product-img card-img-top img-fluid"
@@ -218,7 +217,7 @@
             </a>
             <div class="card-body p-2">
               <div class="text-center text-break">
-                  <h6 class="card-title"><a class="product-name" href="product-detail.html">REVSKÄR</a></h6>
+                  <h6 class="card-title"><a class="product-name" href="product-detail.php">REVSKÄR</a></h6>
               </div>
               <div class="d-flex justify-content-center">
                 <strong class="text-success product-price">$199</strong>
@@ -232,7 +231,7 @@
         <div class="col-4 col-md-3 col-lg-2">        
           <div class="product-card card text-black">
             <i class="bi bi-heart pt-2 px-2"></i>
-            <a href="product-detail.html" class="link-body-emphasis text-decoration-none">
+            <a href="product-detail.php" class="link-body-emphasis text-decoration-none">
               <img
               src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
               class="product-img card-img-top img-fluid"
@@ -241,7 +240,7 @@
             </a>
             <div class="card-body p-2">
               <div class="text-center text-break">
-                  <h6 class="card-title"><a class="product-name" href="product-detail.html">REVSKÄR</a></h6>
+                  <h6 class="card-title"><a class="product-name" href="product-detail.php">REVSKÄR</a></h6>
               </div>
               <div class="d-flex justify-content-center">
                 <strong class="text-success product-price">$199</strong>
@@ -255,7 +254,7 @@
         <div class="col-4 col-md-3 col-lg-2">        
           <div class="product-card card text-black">
             <i class="bi bi-heart pt-2 px-2"></i>
-            <a href="product-detail.html" class="link-body-emphasis text-decoration-none">
+            <a href="product-detail.php" class="link-body-emphasis text-decoration-none">
               <img
               src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
               class="product-img card-img-top img-fluid"
@@ -264,7 +263,7 @@
             </a>
             <div class="card-body p-2">
               <div class="text-center text-break">
-                  <h6 class="card-title"><a class="product-name" href="product-detail.html">REVSKÄR</a></h6>
+                  <h6 class="card-title"><a class="product-name" href="product-detail.php">REVSKÄR</a></h6>
               </div>
               <div class="d-flex justify-content-center">
                 <strong class="text-success product-price">$199</strong>
@@ -278,7 +277,7 @@
         <div class="col-4 col-md-3 col-lg-2">        
           <div class="product-card card text-black">
             <i class="bi bi-heart pt-2 px-2"></i>
-            <a href="product-detail.html" class="link-body-emphasis text-decoration-none">
+            <a href="product-detail.php" class="link-body-emphasis text-decoration-none">
               <img
               src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
               class="product-img card-img-top img-fluid"
@@ -287,7 +286,7 @@
             </a>
             <div class="card-body p-2">
               <div class="text-center text-break">
-                  <h6 class="card-title"><a class="product-name" href="product-detail.html">REVSKÄR</a></h6>
+                  <h6 class="card-title"><a class="product-name" href="product-detail.php">REVSKÄR</a></h6>
               </div>
               <div class="d-flex justify-content-center">
                 <strong class="text-success product-price">$199</strong>
@@ -327,11 +326,11 @@
           <div class="col-6 col-md-3 col-lg-2 mb-3">
             <h5>Sections</h5>
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="index.html#heroes-section" class="nav-link p-0 text-body-secondary">Heroes</a></li>
-              <li class="nav-item mb-2"><a href="index.html#popular-products-section" class="nav-link p-0 text-body-secondary">Popular products</a></li>
-              <li class="nav-item mb-2"><a href="index.html#rooms-section" class="nav-link p-0 text-body-secondary">Rooms</a></li>
-              <li class="nav-item mb-2"><a href="index.html#about-us-section" class="nav-link p-0 text-body-secondary">About us</a></li>
-              <li class="nav-item mb-2"><a href="index.html#featured-section" class="nav-link p-0 text-body-secondary">Featured</a></li>
+              <li class="nav-item mb-2"><a href="index.php#heroes-section" class="nav-link p-0 text-body-secondary">Heroes</a></li>
+              <li class="nav-item mb-2"><a href="index.php#popular-products-section" class="nav-link p-0 text-body-secondary">Popular products</a></li>
+              <li class="nav-item mb-2"><a href="index.php#rooms-section" class="nav-link p-0 text-body-secondary">Rooms</a></li>
+              <li class="nav-item mb-2"><a href="index.php#about-us-section" class="nav-link p-0 text-body-secondary">About us</a></li>
+              <li class="nav-item mb-2"><a href="index.php#featured-section" class="nav-link p-0 text-body-secondary">Featured</a></li>
             </ul>
           </div>
     
@@ -375,4 +374,3 @@
   </div>
   <!-- Footer Section Ends -->
 </body>
-</html>

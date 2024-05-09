@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +8,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 <body>
+<?php
+require("../../../util/dataProvider.php");
+$dp = new DataProvider();
+session_start();
+$userID = $_SESSION['$userID'];
+$sql1 = "SELECT giohang.soluong as slgh, idsanpham *, idmau * FROM giohang join sanpham on (giohang.idsanpham = sanpham.idsanpham and giohang.idmau = sanpham.idsanpham)
+        where maKhachHang = '" . $userID . "'";
+$result1 = $dp->excuteQuery($sql1);
+$sanpham = array();
+if ($result1->num_rows > 0) {
+  while ($row = $result1->fetch_assoc()) {
+      array_push($album, $row);
+  }
+}
+$sql2 = "select diaChi from nguoiDung where maNguoiDung='" . $userID . "'";
+$result2 = $dp->excuteQuery($sql2);
+$address = $result2->fetch_assoc()['diaChi'];
+?>  
+?>
     <!-- Header Section Starts -->
     <div class="container" id="header-section">
       <header class="py-3 mb-3 border-bottom">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid gap-5 p-0 d-flex align-items-center ">
-            <a href="index.html" class="link-body-emphasis text-decoration-none">
+            <a href="index.php" class="link-body-emphasis text-decoration-none">
               <img src="/view/assets/img/logo.png" alt="" width="100px">
             </a>
 
@@ -25,21 +42,21 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
               <ul class="nav nav-pills gap-2 navigation-links">
-                <li class="nav-item"><a href="index.html" class="nav-link" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="shopping.html" class="nav-link">Shopping</a></li>
-                <li class="nav-item"><a href="profile.html" class="nav-link">My Account</a></li>
-                <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
-                <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
+                <li class="nav-item"><a href="index.php" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="shopping.php" class="nav-link">Shopping</a></li>
+                <li class="nav-item"><a href="profile.php" class="nav-link">My Account</a></li>
+                <li class="nav-item"><a href="cart.php" class="nav-link">Cart</a></li>
+                <li class="nav-item"><a href="checkout.php" class="nav-link">Checkout</a></li>
               </ul>
     
               <ul class="nav nav-pills navigation-icons">
-                <li class="nav-item"><a href="cart.html" class="nav-link">
+                <li class="nav-item"><a href="cart.php" class="nav-link">
                     <i class="bi bi-bag" style="font-size: 16px;"></i>
                 </a></li>
-                <li class="nav-item"><a href="favourite.html" class="nav-link">
+                <li class="nav-item"><a href="favourite.php" class="nav-link">
                     <i class="bi bi-heart" style="font-size: 16px;"></i>
                 </a></li>
-                <li class="nav-item"><a href="profile.html" class="nav-link">
+                <li class="nav-item"><a href="profile.php" class="nav-link">
                     <i class="bi bi-person" style="font-size: 16px;"></i>
                 </a></li>
               </ul>
@@ -65,7 +82,7 @@
                   <strong>$20</strong>
                 </li>
               </ul>
-              <a href="checkout.html" class="w-100 btn btn-warning btn-md" role="button">Proceed to checkout</a>
+              <a href="checkout.php" class="w-100 btn btn-warning btn-md" role="button">Proceed to checkout</a>
             </div>
             <div class="col-md-8 col-lg-9">
               <h4 class="mb-3">Your cart</h4>
@@ -74,14 +91,14 @@
 
                 <div class="row mb-4 d-flex flex-wrap align-items-center">
                 <div class="col-2">
-                    <a href="product-detail.html">
+                    <a href="product-detail.php">
                       <img
                     src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
                     class="img-fluid rounded-3" alt="Cotton T-shirt" style="overflow: hidden; width: 100px;">
                     </a>
                 </div>
                 <div class="col-3 text-break">
-                    <h6 class="text-muted"><a href="product-detail.html" class="text-decoration-none text-black nav-link px-0">REVSKÄR</a></h6>
+                    <h6 class="text-muted"><a href="product-detail.php" class="text-decoration-none text-black nav-link px-0"></a></h6>
                     <h6 class="text-black mb-0">$ 199</h6>
                 </div>
                 <div class="col-3 d-flex">
@@ -110,14 +127,14 @@
 
                 <div class="row mb-4 d-flex flex-wrap align-items-center">
                   <div class="col-2">
-                      <a href="product-detail.html">
+                      <a href="product-detail.php">
                         <img
                       src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
                       class="img-fluid rounded-3" alt="Cotton T-shirt" style="overflow: hidden; width: 100px;">
                       </a>
                   </div>
                   <div class="col-3 text-break">
-                      <h6 class="text-muted"><a href="product-detail.html" class="text-decoration-none text-black nav-link px-0">REVSKÄR</a></h6>
+                      <h6 class="text-muted"><a href="product-detail.php" class="text-decoration-none text-black nav-link px-0">REVSKÄR</a></h6>
                       <h6 class="text-black mb-0">$ 199</h6>
                   </div>
                   <div class="col-3 d-flex">
@@ -145,14 +162,14 @@
 
                 <div class="row mb-4 d-flex flex-wrap align-items-center">
                   <div class="col-2">
-                      <a href="product-detail.html">
+                      <a href="product-detail.php">
                         <img
                       src="/view/assets/img/products/revskaer-3-seat-conversation-set-outdoor-anthracite-froesoen-duvholmen-dark-gray__1240171_pe919187_s5.png"
                       class="img-fluid rounded-3" alt="Cotton T-shirt" style="overflow: hidden; width: 100px;">
                       </a>
                   </div>
                   <div class="col-3 text-break">
-                      <h6 class="text-muted"><a href="product-detail.html" class="text-decoration-none text-black nav-link px-0">REVSKÄR</a></h6>
+                      <h6 class="text-muted"><a href="product-detail.php" class="text-decoration-none text-black nav-link px-0">REVSKÄR</a></h6>
                       <h6 class="text-black mb-0">$ 199</h6>
                   </div>
                   <div class="col-3 d-flex">
@@ -189,11 +206,11 @@
           <div class="col-6 col-md-3 col-lg-2 mb-3">
             <h5>Sections</h5>
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="index.html#heroes-section" class="nav-link p-0 text-body-secondary">Heroes</a></li>
-              <li class="nav-item mb-2"><a href="index.html#popular-products-section" class="nav-link p-0 text-body-secondary">Popular products</a></li>
-              <li class="nav-item mb-2"><a href="index.html#rooms-section" class="nav-link p-0 text-body-secondary">Rooms</a></li>
-              <li class="nav-item mb-2"><a href="index.html#about-us-section" class="nav-link p-0 text-body-secondary">About us</a></li>
-              <li class="nav-item mb-2"><a href="index.html#featured-section" class="nav-link p-0 text-body-secondary">Featured</a></li>
+              <li class="nav-item mb-2"><a href="index.php#heroes-section" class="nav-link p-0 text-body-secondary">Heroes</a></li>
+              <li class="nav-item mb-2"><a href="index.php#popular-products-section" class="nav-link p-0 text-body-secondary">Popular products</a></li>
+              <li class="nav-item mb-2"><a href="index.php#rooms-section" class="nav-link p-0 text-body-secondary">Rooms</a></li>
+              <li class="nav-item mb-2"><a href="index.php#about-us-section" class="nav-link p-0 text-body-secondary">About us</a></li>
+              <li class="nav-item mb-2"><a href="index.php#featured-section" class="nav-link p-0 text-body-secondary">Featured</a></li>
             </ul>
           </div>
     
@@ -237,4 +254,3 @@
   </div>
   <!-- Footer Section Ends -->
 </body>
-</html>
