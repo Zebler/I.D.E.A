@@ -2,7 +2,17 @@
 
 function ShowSanPham(){  
     $.ajax({
-        url:"./adminView/SanPham.php",
+        url:"./view/pages/admin/SanPham.php",
+        method:"post",
+        data:{record:1},
+        success:function(data){
+            $('.allContent-section').html(data);
+        }
+    });
+}
+function ShowThongKe(){
+    $.ajax({
+        url:"./view/pages/admin/ThongKe.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -12,7 +22,7 @@ function ShowSanPham(){
 }
 function ShowLoai(){
     $.ajax({
-        url:"./adminView/Loai.php",
+        url:"./view/pages/admin/Loai.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -22,7 +32,7 @@ function ShowLoai(){
 }
 function ShowQuyen(){
     $.ajax({
-        url:"./adminView/Quyen.php",
+        url:"./view/pages/admin/Quyen.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -32,7 +42,7 @@ function ShowQuyen(){
 }
 function ShowMau(){
     $.ajax({
-        url:"./adminView/Mau.php",
+        url:"./view/pages/admin/Mau.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -42,7 +52,7 @@ function ShowMau(){
 }
 function ShowTaiKhoan(){
     $.ajax({
-        url:"./adminView/TaiKhoan.php",
+        url:"./view/pages/admin/TaiKhoan.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -52,7 +62,7 @@ function ShowTaiKhoan(){
 }
 function ShowVaiTro(){
     $.ajax({
-        url:"./adminView/VaiTro.php",
+        url:"./view/pages/admin/VaiTro.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -62,7 +72,7 @@ function ShowVaiTro(){
 }
 function ShowVaiTro_Quyen(){
     $.ajax({
-        url:"./adminView/VaiTro_Quyen.php",
+        url:"./view/pages/admin/VaiTro_Quyen.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -72,7 +82,7 @@ function ShowVaiTro_Quyen(){
 }
 function editVaiTro_Quyen(){
     $.ajax({
-        url:"./adminView/editVaiTro_Quyen.php",
+        url:"./view/pages/admin/editVaiTro_Quyen.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -80,9 +90,9 @@ function editVaiTro_Quyen(){
         }
     });
 }
-function editKhuyenMai(){
+function editPhong(){
     $.ajax({
-        url:"./adminView/editKhuyenMai.php",
+        url:"./view/pages/admin/editPhong.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -92,7 +102,7 @@ function editKhuyenMai(){
 }
 function ShowYeuThich(){
     $.ajax({
-        url:"./adminView/YeuThich.php",
+        url:"./view/pages/admin/YeuThich.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -102,7 +112,7 @@ function ShowYeuThich(){
 }
 function ShowPhong(){
     $.ajax({
-        url:"./adminView/Phong.php",
+        url:"./view/pages/admin/Phong.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -112,7 +122,7 @@ function ShowPhong(){
 }
 function ShowNguoiDung(){
     $.ajax({
-        url:"./adminView/NguoiDung.php",
+        url:"./view/pages/admin/NguoiDung.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -122,7 +132,7 @@ function ShowNguoiDung(){
 }
 function ShowLoaiNguoiDung(){
     $.ajax({
-        url:"./adminView/LoaiNguoiDung.php",
+        url:"./view/pages/admin/LoaiNguoiDung.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -132,7 +142,7 @@ function ShowLoaiNguoiDung(){
 }
 function editNguoiDung(id){
     $.ajax({
-        url:"./adminView/editNguoiDung.php",
+        url:"./view/pages/admin/editNguoiDung.php",
         method:"post",
         data:id,
         success:function(data){
@@ -142,7 +152,7 @@ function editNguoiDung(id){
 }
 function editLoaiNguoiDung(id){
     $.ajax({
-        url:"./adminView/editLoaiNguoiDung.php",
+        url:"./view/pages/admin/editLoaiNguoiDung.php",
         method:"post",
         data:id,
         success:function(data){
@@ -152,7 +162,7 @@ function editLoaiNguoiDung(id){
 }
 function editYeuThich(id){
     $.ajax({
-        url:"./adminView/editYeuThich.php",
+        url:"./view/pages/admin/editYeuThich.php",
         method:"post",
         data:id,
         success:function(data){
@@ -162,7 +172,7 @@ function editYeuThich(id){
 }
 function editVaiTro(id){
     $.ajax({
-        url:"./adminView/editVaiTro.php",
+        url:"./view/pages/admin/editVaiTro.php",
         method:"post",
         data:id,
         success:function(data){
@@ -172,7 +182,7 @@ function editVaiTro(id){
 }
 function editTaiKhoan(id){
     $.ajax({
-        url:"./adminView/editTaiKhoan.php",
+        url:"./view/pages/admin/editTaiKhoan.php",
         method:"post",
         data:id,
         success:function(data){
@@ -180,9 +190,9 @@ function editTaiKhoan(id){
         }
     });
 }
-function editSlideShow(id){
+function editMau(id){
     $.ajax({
-        url:"./adminView/editSlideShow.php",
+        url:"./view/pages/admin/editMau.php",
         method:"post",
         data:id,
         success:function(data){
@@ -192,7 +202,7 @@ function editSlideShow(id){
 }
 function editQuyen(id){
     $.ajax({
-        url:"./adminView/editQuyen.php",
+        url:"./view/pages/admin/editQuyen.php",
         method:"post",
         data:id,
         success:function(data){
@@ -202,7 +212,7 @@ function editQuyen(id){
 }
 function ShowPhieuNhap(){
     $.ajax({
-        url:"./adminView/PhieuNhap.php",
+        url:"./view/pages/admin/PhieuNhap.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -212,7 +222,7 @@ function ShowPhieuNhap(){
 }
 function editPhieuNhap(id){
     $.ajax({
-        url:"./adminView/editPhieuNhap.php",
+        url:"./view/pages/admin/editPhieuNhap.php",
         method:"post",
         data:id,
         success:function(data){
@@ -222,7 +232,7 @@ function editPhieuNhap(id){
 }
 function editGioHang(id){
     $.ajax({
-        url:"./adminView/editGioHang.php",
+        url:"./view/pages/admin/editGioHang.php",
         method:"post",
         data:id,
         success:function(data){
@@ -232,7 +242,7 @@ function editGioHang(id){
 }
 function ShowGioHang(){
     $.ajax({
-        url:"./adminView/GioHang.php",
+        url:"./view/pages/admin/GioHang.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -242,7 +252,7 @@ function ShowGioHang(){
 }
 function ShowChiTietPhieuNhap(){
     $.ajax({
-        url:"./adminView/ChiTietPhieuNhap.php",
+        url:"./view/pages/admin/ChiTietPhieuNhap.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -252,7 +262,7 @@ function ShowChiTietPhieuNhap(){
 }
 function ShowChiTietHoaDon(){
     $.ajax({
-        url:"./adminView/ChiTietHoaDon.php",
+        url:"./view/pages/admin/ChiTietHoaDon.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -262,7 +272,7 @@ function ShowChiTietHoaDon(){
 }
 function ShowAlbum_BaiHat(){
     $.ajax({
-        url:"./adminView/BaiHatAblum.php",
+        url:"./view/pages/admin/BaiHatAblum.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -272,7 +282,7 @@ function ShowAlbum_BaiHat(){
 }
 function ShowChucNang(){  
     $.ajax({
-        url:"./adminView/ChucNang.php",
+        url:"./view/pages/admin/ChucNang.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -282,7 +292,7 @@ function ShowChucNang(){
 }
 function ShowHoaDon(){  
     $.ajax({
-        url:"./adminView/HoaDon.php",
+        url:"./view/pages/admin/HoaDon.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -292,7 +302,7 @@ function ShowHoaDon(){
 }
 function showCategory(){  
     $.ajax({
-        url:"./adminView/viewCategories.php",
+        url:"./view/pages/admin/viewCategories.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -302,7 +312,7 @@ function showCategory(){
 }
 function showSizes(){  
     $.ajax({
-        url:"./adminView/viewSizes.php",
+        url:"./view/pages/admin/viewSizes.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -312,7 +322,7 @@ function showSizes(){
 }
 function showProductSizes(){  
     $.ajax({
-        url:"./adminView/viewProductSizes.php",
+        url:"./view/pages/admin/viewProductSizes.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -323,7 +333,7 @@ function showProductSizes(){
 
 function showCustomers(){
     $.ajax({
-        url:"./adminView/viewCustomers.php",
+        url:"./view/pages/admin/viewCustomers.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -334,7 +344,7 @@ function showCustomers(){
 
 function showOrders(){
     $.ajax({
-        url:"./adminView/viewAllOrders.php",
+        url:"./view/pages/admin/viewAllOrders.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -345,7 +355,7 @@ function showOrders(){
 
 function ChangeOrderStatus(id){
     $.ajax({
-       url:"./controller/updateOrderStatus.php",
+       url:"./view/pages/admincontroller/updateOrderStatus.php",
        method:"post",
        data:{record:id},
        success:function(data){
@@ -358,7 +368,7 @@ function ChangeOrderStatus(id){
 
 function ChangePay(id){
     $.ajax({
-       url:"./controller/updatePayStatus.php",
+       url:"./view/pages/admincontroller/updatePayStatus.php",
        method:"post",
        data:{record:id},
        success:function(data){
@@ -387,7 +397,7 @@ function addItems(){
     fd.append('file', file);
     fd.append('upload', upload);
     $.ajax({
-        url:"./controller/addItemController.php",
+        url:"./view/pages/admincontroller/addItemController.php",
         method:"post",
         data:fd,
         processData: false,
@@ -403,7 +413,7 @@ function addItems(){
 //edit product data
 function itemEditForm(id){
     $.ajax({
-        url:"./adminView/editItemForm.php",
+        url:"./view/pages/admin/editItemForm.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -411,19 +421,9 @@ function itemEditForm(id){
         }
     });
 }
-function editAlbum_BaiHat(id){
-    $.ajax({
-        url:"./adminView/editAlbum_BaiHat.php",
-        method:"post",
-        data:id,
-        success:function(data){
-            $('.allContent-section').html(data);
-        }
-    });
-}
 function editHoaDon(id){
     $.ajax({
-        url:"./adminView/editHoaDon.php",
+        url:"./view/pages/admin/editHoaDon.php",
         method:"post",
         data:id,
         success:function(data){
@@ -433,7 +433,7 @@ function editHoaDon(id){
 }
 function editChiTietPhieuNhap(id){
     $.ajax({
-        url:"./adminView/editChiTietPhieuNhap.php",
+        url:"./view/pages/admin/editChiTietPhieuNhap.php",
         method:"post",
         data:id,
         success:function(data){
@@ -441,9 +441,9 @@ function editChiTietPhieuNhap(id){
         }
     });
 }
-function editAlbum(id){
+function editLoai(id){
     $.ajax({
-        url:"./adminView/editAlbum.php",
+        url:"./view/pages/admin/editLoai.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -453,7 +453,7 @@ function editAlbum(id){
 }
 function editChucNang(id){
     $.ajax({
-        url:"./adminView/editChucNang.php",
+        url:"./view/pages/admin/editChucNang.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -463,7 +463,7 @@ function editChucNang(id){
 }
 function editChiTietHoaDon(id){
     $.ajax({
-        url:"./adminView/editChiTietHoaDon.php",
+        url:"./view/pages/admin/editChiTietHoaDon.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -490,7 +490,7 @@ function updateItems(){
     fd.append('newImage', newImage);
    
     $.ajax({
-      url:'./controller/updateItemController.php',
+      url:'./view/pages/admincontroller/updateItemController.php',
       method:'post',
       data:fd,
       processData: false,
@@ -506,7 +506,7 @@ function updateItems(){
 //delete product data
 function itemDelete(id){
     $.ajax({
-        url:"./controller/deleteItemController.php",
+        url:"./view/pages/admincontroller/deleteItemController.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -521,7 +521,7 @@ function itemDelete(id){
 //delete cart data
 function cartDelete(id){
     $.ajax({
-        url:"./controller/deleteCartController.php",
+        url:"./view/pages/admincontroller/deleteCartController.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -534,7 +534,7 @@ function cartDelete(id){
 
 function eachDetailsForm(id){
     $.ajax({
-        url:"./view/viewEachDetails.php",
+        url:"./view/pages/adminview/viewEachDetails.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -548,7 +548,7 @@ function eachDetailsForm(id){
 //delete category data
 function categoryDelete(id){
     $.ajax({
-        url:"./controller/catDeleteController.php",
+        url:"./view/pages/admincontroller/catDeleteController.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -562,7 +562,7 @@ function categoryDelete(id){
 //delete size data
 function sizeDelete(id){
     $.ajax({
-        url:"./controller/deleteSizeController.php",
+        url:"./view/pages/admincontroller/deleteSizeController.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -577,7 +577,7 @@ function sizeDelete(id){
 //delete variation data
 function variationDelete(id){
     $.ajax({
-        url:"./controller/deleteVariationController.php",
+        url:"./view/pages/admincontroller/deleteVariationController.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -591,7 +591,7 @@ function variationDelete(id){
 //edit variation data
 function variationEditForm(id){
     $.ajax({
-        url:"./adminView/editVariationForm.php",
+        url:"./view/pages/admin/editVariationForm.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -614,7 +614,7 @@ function updateVariations(){
     fd.append('qty', qty);
    
     $.ajax({
-      url:'./controller/updateVariationController.php',
+      url:'./view/pages/admincontroller/updateVariationController.php',
       method:'post',
       data:fd,
       processData: false,
@@ -628,7 +628,7 @@ function updateVariations(){
 }
 function search(id){
     $.ajax({
-        url:"./controller/searchController.php",
+        url:"./view/pages/admincontroller/searchController.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -640,7 +640,7 @@ function search(id){
 
 function quantityPlus(id){ 
     $.ajax({
-        url:"./controller/addQuantityController.php",
+        url:"./view/pages/admincontroller/addQuantityController.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -651,7 +651,7 @@ function quantityPlus(id){
 }
 function quantityMinus(id){
     $.ajax({
-        url:"./controller/subQuantityController.php",
+        url:"./view/pages/admincontroller/subQuantityController.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -663,7 +663,7 @@ function quantityMinus(id){
 
 function checkout(){
     $.ajax({
-        url:"./view/viewCheckout.php",
+        url:"./view/pages/adminview/viewCheckout.php",
         method:"post",
         data:{record:1},
         success:function(data){
@@ -675,7 +675,7 @@ function checkout(){
 
 function removeFromWish(id){
     $.ajax({
-        url:"./controller/removeFromWishlist.php",
+        url:"./view/pages/admincontroller/removeFromWishlist.php",
         method:"post",
         data:{record:id},
         success:function(data){
@@ -687,7 +687,7 @@ function removeFromWish(id){
 
 function addToWish(id){
     $.ajax({
-        url:"./controller/addToWishlist.php",
+        url:"./view/pages/admincontroller/addToWishlist.php",
         method:"post",
         data:{record:id},
         success:function(data){

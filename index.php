@@ -6,7 +6,7 @@
 <body>
 <div id="warrper">
     <header id="header">
-      <?php require 'view/pages/user/index.php' ?>
+    
     </header>
 </body>
 </html>

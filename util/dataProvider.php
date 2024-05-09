@@ -3,7 +3,7 @@ class DataProvider
 {
   public static function excuteQuery($sql)
   {
-    include('connect.php');
+    include('conInfo.php');
     if (!$connection = mysqli_connect($servername, $username, $password, $dbname)) {
       die("couldn't connect to localhost");
     }
