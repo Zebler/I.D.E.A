@@ -10,8 +10,8 @@
             for your living space. Explore our diverse collection today!
           </p>
           <div class="d-flex gap-3 justify-content-md-start">
-            <a class="btn btn-primary px-4" href="register.php" role="button">Register now</a>
-            <a class="d-flex align-items-center login-link" href="login.php">Login to your account</a>
+            <a class="btn btn-primary px-4" href="view/pages/user/register.php" role="button">Register now</a>
+            <a class="d-flex align-items-center login-link" href="view/pages/user/login.php">Login to your account</a>
           </div>
         </div>
       </div>

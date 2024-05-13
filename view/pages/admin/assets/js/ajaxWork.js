@@ -1,5 +1,3 @@
-
-
 function ShowSanPham(){  
     $.ajax({
         url:"./view/pages/admin/SanPham.php",
@@ -39,6 +37,16 @@ function ShowQuyen(){
             $('.allContent-section').html(data);
         }
     });
+}
+function loadLogin(){
+    $.ajax({
+        url:"./view/pages/user/login.php",
+        method:"post",
+        data:{record:1},
+        success:function(data){
+            $('.allContent-section').html(data);
+        }
+    })
 }
 function ShowMau(){
     $.ajax({
